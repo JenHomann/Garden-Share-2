@@ -1,0 +1,22 @@
+<h1>This is the detail page for <%= @plant.name %></h1>
+
+<p>
+  <%= @plant.name %>
+</p>
+<p>
+  Total yield: <%= @plant.total %>
+</p>
+<p>
+  Still growing? <%= @plant.fruitbearing? %>
+</p>
+<p><a href = "/plants/<%=@plant.id%>/edit">Edit info</a></p>
+<p>What to do with all of the <%=@plant.name%>!? <a href = "/plants/<%=@plant.id%>/recipes/1"><i>(HINT: find a new recipe!)</i></a></p>
+<p>Growing tips:
+  <ul>
+    <% @plant.tips.each do |tip| %>
+      <li><%= tip.info %></li>
+    <% end %>
+  </ul>
+</p>
+<p><a href ="/plants/<%=@plant.id%>/new_tip">Add a new tip</a></p>
+<p><a href = "/plants">Back to garden</a></p>

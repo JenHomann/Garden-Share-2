@@ -1,0 +1,21 @@
+<% if @plant.valid? %>
+
+  <h1>Update garden</h1>
+
+  <p>You have successfully added "<%= @plant.name %>" to your garden!</p>
+
+  <p><a href = "/plants">Back to garden</a></p>
+
+<% else %>
+
+  <h1>ERROR!</h1>
+  
+  <p>
+    <% @plant.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
+  </p>
+  
+  <p><a href = "/plants/new">Try again?</a></p>
+  
+<% end %>

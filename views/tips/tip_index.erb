@@ -1,0 +1,10 @@
+<h1>These are all of your tips</h1>
+
+<ul>
+  <% @tips.each do |tip| %>
+    <li><a href = "/tips/<%=tip.id%>"><%= tip.info %>:</a><br>
+    <% tip.plants.each do |plant| %>
+      <a href = "/plants/<%=plant.id%>"><%= plant.name %></li>
+    <% end %>
+  <% end %>
+</ul>

@@ -1,0 +1,20 @@
+<h1>These are your plants</h1>
+
+<table>
+  <tr>
+    <td>Plant name</td>
+    <td>Total yield</td>
+    <td>Still growing?</td>
+  </tr>
+  <% @plants.each do |p| %>
+  <tr>
+    <td><a href= "/plants/<%=p.id%>"><%= p.name %></td>
+    <td><%= p.total %><br>
+    <td><%= p.fruitbearing? %></td>
+    <td><a href = "/plants/<%=p.id%>/recipes/1">Find recipes</a></td>
+    <td><a href = "/plants/<%=p.id%>/edit">Edit</a></td>
+  </tr>
+  <% end %>
+</table>
+
+<a href = "/plants/new">Add a new plant to the garden</a>

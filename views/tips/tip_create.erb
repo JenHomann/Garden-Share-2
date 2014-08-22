@@ -1,0 +1,18 @@
+<% if @tip.valid? %>
+  <h1>Create tip</h1>
+
+  <p>You have successfully added <a href = "/tips/<%=@tip.id%>">"<%= @tip.info %>"</a> to your garden!</p>
+
+  <p><a href = "/plants/<%=@plant.id%>">Back to <%=@plant.name%> details</a></p>
+  <p><a href = "/tips">Back to all tips</a></p>
+  <p><a href = "/plants">Back to garden</a></p>
+
+<% else %>
+
+  <h1>ERROR!</h1>
+
+  <p><% @tip.errors.full_messages.each do |msg| %>
+        <%= msg %></p>
+      <% end %>
+      
+<% end %>

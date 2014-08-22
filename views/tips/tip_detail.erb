@@ -1,0 +1,15 @@
+<h1>This is the detail page for <%= @tip.info %></h1>
+
+<p>
+   <%= @tip.info %>
+</p>
+<p><a href = "/tips/<%=@tip.id%>/edit">Edit details</a></p>
+<p>
+  Plants:
+    <% @tip.plants.each do |plant| %>
+      <a href = "/plants/<%=plant.id%>"><%= plant.name %></a>
+    <% end %>
+</p>
+
+<p><a href = "/tips">Back to all tips</a></p>
+<p><a href = "/plants">Back to garden</a></p>

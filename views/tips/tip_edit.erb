@@ -1,0 +1,20 @@
+<h1>Edit info for <%=@tip.info%></h1>
+
+<form action = "/tips/<%=@tip.id%>/update" method= "post">
+  Edit tip details:
+  <p><textarea rows = "4" cols = "30" name = "info" align = "middle"><%=@tip.info%></textarea>
+  <p>Assigned to:</p>
+  <% @plants.each do |plant|%>
+    <input type = "checkbox" name = "plants[]" value ="<%=plant.id%>" <%= "checked" if @tip.plants.include?(plant)%> ><%= plant.name %><br>
+    <% end %>
+  <input type = "submit" >
+</form>
+
+<p>Would you like to delete "<%=@tip.info %>" from your list of tips? This action will delete it from all associated plants and can not be undone.</p>
+
+<form action = "/tips/<%=@tip.id%>/delete" method = "post">
+  <input type = "submit" value = "Delete">
+</form>
+
+<p><a href = "/tips">Back to all tips</a></p>
+<p><a href = "/plants">Back to garden</a></p>

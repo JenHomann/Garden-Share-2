@@ -1,0 +1,18 @@
+<% if @yield.valid? %>
+
+  <h1>Success! You have successfully updated <%=@plant.name%> with today's pick</h1>
+
+  <p><a href = "/plants/<%=@plant.id%>">Return to the <%=@plant.name%> detail page.</a></p>
+  <p><a href = "/plants">Return to full garden</a></p> 
+  
+<% else %>
+
+  <h1>ERROR!</h1>
+  
+  <p><% @yield.errors.full_messages.each do |msg| %>
+        <%= msg %></p>
+      <% end %>
+      
+  <p><a href = "/plants/<%=@plant.id%>/edit">Try again?</a></p>
+      
+<% end %>

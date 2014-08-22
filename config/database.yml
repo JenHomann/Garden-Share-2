@@ -1,0 +1,7 @@
+development:
+  database: db/garden.db
+  adapter: sqlite3
+
+test:
+  database: db/garden_test.db
+  adapter: sqlite3

@@ -1,0 +1,44 @@
+<table>
+  <col width="550">
+  <col width="200">
+  <tr>
+    <td><h1>Recipe ideas for <%= @plant.name %></h1></td>
+    <td><a href = "/plants/<%=@plant.id%>/recipes/<%= @num + 1 %>">More recipe ideas</a></td>
+    <td><a href = "/plants/<%=@plant.id%>">Back to <%=@plant.name%> info</a></td>
+  </tr>
+</table>
+
+<table>
+  <table border=1 frame=void rules=rows>
+    <col width="300">
+    <col width="180">
+    <col width="350">
+  <tr>
+    &nbsp;
+  </tr>
+  <tr>
+    &nbsp;
+  </tr>
+  <% @recipes.each do |r| %>
+  <tr>
+    <td>
+      <img src="<%=r[:image]%>" align= "middle">
+      <br><h3><%= r[:name] %></h3>
+    </td>
+    <td>
+      <strong>Serves: </strong><%= r[:servings]%>
+      <br><strong>Prep-time: </strong><%= r[:prep_time]%> minutes
+      <br><strong>Cook-time: </strong><%= r[:cook_time]%> minutes
+    </td>
+    <td>
+      <strong>Ingredients: </strong>
+        <% r[:ingredients].each do |i|%>
+            <br><%= i[:quantity] %> <%= i[:unit]%> <%= i[:name]%>
+            <% end %>
+    </td>
+    <td>
+      <%= r[:directions][0] %>
+    </td>
+  </tr>
+  <% end %>
+</table>
