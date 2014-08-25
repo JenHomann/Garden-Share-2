@@ -12,7 +12,6 @@ get "/plants/:id/new_tip" do
 end
 
 post "/plants/:id/create_tip" do
-  binding.pry
   @plant = Plant.find(params[:id])
   @tip = Tip.create(info: params[:info])
   @plant.tips << @tip

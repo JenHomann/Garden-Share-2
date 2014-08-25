@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825145303) do
+ActiveRecord::Schema.define(version: 20140825155146) do
 
   create_table "plants", force: true do |t|
-    t.string "name"
+    t.string  "name"
+    t.boolean "fruitbearing", default: true
   end
 
   create_table "plants_tips", force: true do |t|
