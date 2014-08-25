@@ -25,4 +25,3 @@ get "/plants/:id/recipes/:num" do
   
   erb :recipes
 end
-
