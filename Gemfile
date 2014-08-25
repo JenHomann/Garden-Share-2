@@ -6,8 +6,6 @@ gem "sinatra"
 gem "sinatra-reloader"
 gem "sinatra-activerecord"
 
-gem "sqlite3"
-
 gem "allrecipes"
 
 group :development, :test do
