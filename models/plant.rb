@@ -4,14 +4,14 @@ class Plant < ActiveRecord::Base
   
   validates :name, uniqueness: true
   
-  def edit_fruitbearing(input)
-    if input == "no"
-      fruitbearing = 0
-    else
-      fruitbearing = 1
-    end
-    self.save
-  end
+  # def edit_fruitbearing(input)
+  #   if input ==
+  #     fruitbearing = 0
+  #   else
+  #     fruitbearing = 1
+  #   end
+  #   self.save
+  # end
   
   # Returns a boolean reflecting whether the given fruitbearing attribute is set to 1 or 0
   def fruitbearing?
