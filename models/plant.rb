@@ -15,7 +15,7 @@ class Plant < ActiveRecord::Base
   
   # Returns a boolean reflecting whether the given fruitbearing attribute is set to 1 or 0
   def fruitbearing?
-    if fruitbearing == 1
+    if fruitbearing == true
       "yes"
     else
       "no"
