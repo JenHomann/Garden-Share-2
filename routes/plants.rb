@@ -10,7 +10,7 @@ get "/plants/new" do
 end
 
 post "/plants/create" do
-  @plant = Plant.create(name: params[:name], fruitbearing: 1)
+  @plant = Plant.create(name: params[:name], fruitbearing: true)
   
   erb :"plants/plant_create"
 end
@@ -22,6 +22,7 @@ get "/plants/:id/edit" do
 end
 
 post "/plants/:id/update" do
+  binding.pry
   @plant = Plant.find(params[:id])
   @plant.update_attributes({name: params[:name], fruitbearing: params[:fruitbearing]})
   
