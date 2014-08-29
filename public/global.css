@@ -1,7 +1,7 @@
 #container {
   background: #F7F7DE;
   width: 1440px;
-  height: 1440px;
+  font-family: "Georgia";
 }
 
 #content {
@@ -13,6 +13,7 @@
 
 header {
   background: #878f6d;
+  color: white;
   width: 1300px;
   height: 100px;
   margin: 0 auto;
@@ -21,12 +22,35 @@ header {
   z-index: 9999;
 }
 
-.plant_detail:before, .plant_detail:after {
+header #logo {
+  float: right;
+  width: 50%;
+  font-weight: 200px;
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+#logo a {
+  color: white;
+  text-decoration: none;
+}
+
+#top_nav li {
+  width:50%;
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  float: left;
+  width: auto;
+  letter-spacing: 2px;
+}
+
+
+.plant_detail:before, .plant_detail:after, header:before, header:after, .plant_yield:before, .plant_yield:after, .plant_recipe:before, .plant_recipe:after {
   content: " ";
   display: table;
 }
 
-.plant_detail:after {
+.plant_detail:after, header:after, .plant_yield:after, .plant_recipe:after {
   clear: both;
 }
 
@@ -56,15 +80,6 @@ header {
   color: white;
   border-top: 2px solid #a35894;
   border-bottom: 2px solid #a35894;
-}
-
-.plant_yield:before, .plant_yield:after {
-  content: " ";
-  display: table;
-}
-
-.plant_yield:after {
-  clear: both;
 }
 
 #yield_display {
@@ -115,4 +130,29 @@ header {
 #add_yield_button p {
   padding-left: 25px;
   padding-bottom: 5px;
+}
+
+.plant_recipe {
+  padding-bottom: 60px;
+}
+
+#plant_recipe_image {
+  width: 40%;
+  float: left;
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+#plant_recipe_info {
+  width: 40%;
+  padding-top: 60px;
+  padding-right: 100px;
+  float: right;
+}
+
+footer {
+  background: #E5E5E5;
+  height: 163px;
+  width: 1300px;
+  border-top: 2px solid #858585;
 }
