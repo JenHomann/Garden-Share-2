@@ -3,13 +3,21 @@
 
 <head>
   <meta charset="utf-8">
-  <title>My Site</title>
-  <meta name="description" content="">
+  <title>Garden Tracker</title>
+  <meta name="description" content="Grow. Gather. Gourmet. A fresh, home-grown meal is just three steps away.">
   
+  <link rel="stylesheet" href="/normalize.css" type="text/css" media="screen" charset="utf-8">
   <link rel="stylesheet" href="/global.css" type="text/css" media="screen" charset="utf-8">
 </head>
 
 <body>
-  <%= yield %>
+  <div id="container">
+    <div id="content">
+      <header>
+        This is the header
+      </header>
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

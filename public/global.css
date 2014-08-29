@@ -1,0 +1,98 @@
+#container {
+  background: #F7F7DE;
+  width: 1440px;
+  height: 1440px;
+}
+
+#content {
+  background: white;
+  width: 1300px;
+  height: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  background: #EC5A0A;
+  width: 1300px;
+  height: 100px;
+  margin: 0 auto;
+  position:fixed;
+}
+
+.plant_detail:before, .plant_detail:after {
+  content: " ";
+  display: table;
+}
+
+.plant_detail:after {
+  clear: both;
+}
+
+#plant_info {
+ padding: 120px 0 0 100px;
+ float: left;
+}
+
+#plant_info h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#plant_info h2 {
+  text-align: center;
+}
+
+#plant_image {
+  padding-top: 60px;
+  float: right;
+}
+
+.plant_yield {
+  position: relative;
+  height: 80px;
+  background: #CACB16;
+  color: white;
+}
+
+#yield_display {
+  position: absolute;
+  top: -25px;
+  left: 200px;
+  background: #CACB16;
+  height: 120px;
+  width: 120px;
+  border: 8px solid white;
+  border-radius: 100px;
+}
+
+#yield_display p {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#how_much_yield {
+  background: #CACB16;
+  float: right;
+  padding-right: 160px;
+}
+
+#how_much_yield p {
+  font-size: 24px;
+  float: right;
+}
+
+#add_yield_button {
+  background: white;
+  border: #A0A110;
+  float: right;
+  margin-right: 200px;
+  margin-top: 17px;
+  color: #CACB16;
+  height: 40px;
+  width: 120px;
+}
+
+#add_yield_button p {
+  padding: 10px 
+}
