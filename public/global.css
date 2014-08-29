@@ -12,11 +12,12 @@
 }
 
 header {
-  background: #EC5A0A;
+  background: #878f6d;
   width: 1300px;
   height: 100px;
   margin: 0 auto;
   position:fixed;
+  border-bottom: 2px solid #656e5c;
   z-index: 9999;
 }
 
@@ -51,15 +52,26 @@ header {
 .plant_yield {
   position: relative;
   height: 80px;
-  background: #CACB16;
+  background: #d9abc0;
   color: white;
+  border-top: 2px solid #a35894;
+  border-bottom: 2px solid #a35894;
+}
+
+.plant_yield:before, .plant_yield:after {
+  content: " ";
+  display: table;
+}
+
+.plant_yield:after {
+  clear: both;
 }
 
 #yield_display {
   position: absolute;
   top: -25px;
   left: 200px;
-  background: #CACB16;
+  background: #d9abc0;
   height: 120px;
   width: 120px;
   border: 8px solid white;
@@ -73,7 +85,7 @@ header {
 }
 
 #how_much_yield {
-  background: #CACB16;
+  background: #d9abc0;
   float: right;
   padding-right: 80px;
 }
@@ -81,6 +93,7 @@ header {
 #how_much_yield p {
   font-size: 24px;
   float: right;
+  color: #a35894;
 }
 
 #add_yield_button {
@@ -90,13 +103,13 @@ header {
   margin-top: 15px;
   height: 46px;
   width: 200px;
-  border: 4px solid #AEAF10;
+  border: 4px solid #a35894;
   border-radius: 20px;
 }
 
 #add_yield_button a {
   text-decoration: none;
-  color: #AEAF10;
+  color: #a35894;
 }
 
 #add_yield_button p {
