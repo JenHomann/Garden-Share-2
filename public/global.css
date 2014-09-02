@@ -37,13 +37,26 @@ header #logo {
   text-decoration: none;
 }
 
+#top_nav {
+  margin-top: -20px;
+  margin-left: -40px;
+}
+
 #top_nav li {
-  width:50%;
+  background: #adbd8f;
+  height: 50px;
+  width: 100px;
   display: inline-block;
-  padding: 10px 20px 10px 20px;
-  float: left;
-  width: auto;
+  padding: 30px 30px 0 50px;
+  float: left;  
   letter-spacing: 2px;
+  border-left: 1px solid #656e5c;
+  border-right: 1px solid #656e5c;
+}
+
+#top_nav a {
+  text-decoration: none;
+  color: #656e5c;
 }
 
 .plant_detail:before, .plant_detail:after, header:before, header:after, .plant_yield:before, .plant_yield:after, .plant_recipe:before, .plant_recipe:after {
@@ -154,6 +167,27 @@ header #logo {
   padding-top: 60px;
   padding-right: 100px;
   float: right;
+}
+
+#more_recipes {
+  background: #878f6d;
+  float: right;
+  margin-right: 92px;
+  height: 46px;
+  width: 200px;
+  border: 4px solid #656e5c;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+#more_recipes p {
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+#more_recipes a {
+  text-decoration: none;
+  color: white;
 }
 
 footer {
