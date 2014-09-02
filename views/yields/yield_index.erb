@@ -1,20 +1,23 @@
-<h1>These are all of the yields entered into the database</h1>
+<div class="index">
+  <div class="index_table">
 
-<table>
-  <tr>
-    <td>Plant</td>
-    <td>Yield</td>
-    <td>Total</td>
-  </tr>
-  <% @plants.each do |plant| %>
-  <tr>
-    <td><a href = "/plants/<%=plant.id%>"><%= plant.name %></a></td>
-    <td><% plant.yields.each do |y| %>
-        <a href = "/yields/<%=y.id%>"><%= y.number %><br>
-    <% end %></td>
-    <td><%= plant.total %></td>
-  </tr>
-  <% end %>
-</table>
+    <table>
+      <tr>
+        <td>Plant</td>
+        <td>Yield</td>
+        <td>Total</td>
+      </tr>
+      <% @plants.each do |plant| %>
+      <tr>
+        <td><a href = "/plants/<%=plant.id%>"><%= plant.name %></a></td>
+        <td><% plant.yields.each do |y| %>
+            <a href = "/yields/<%=y.id%>"><%= y.number %><br>
+        <% end %></td>
+        <td><%= plant.total %></td>
+      </tr>
+      <% end %>
+    </table>
 
-<a href = "/plants">Back to garden</a>
+    <a href = "/plants">Back to garden</a>
+  </div>
+</div>

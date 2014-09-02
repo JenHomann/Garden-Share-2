@@ -1,10 +1,22 @@
-<h1>These are all of your tips</h1>
+<div class="index">
 
-<ul>
-  <% @tips.each do |tip| %>
-    <li><a href = "/tips/<%=tip.id%>"><%= tip.info %>:</a><br>
-    <% tip.plants.each do |plant| %>
-      <a href = "/plants/<%=plant.id%>"><%= plant.name %></li>
+  <div class="index_table">
+
+  <h1>These are all of your tips</h1>
+
+  <ul>
+    <% @tips.each do |tip| %>
+      <li><a href = "/tips/<%=tip.id%>"><%= tip.info %>:</a><br>
+      <% tip.plants.each do |plant| %>
+        <a href = "/plants/<%=plant.id%>"><%= plant.name %></li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+  
+  </div>
+  
+  <div class="add_new_button">
+    <p><a href="#">ADD NEW TIP</a></p>
+  </div>
+  
+</div>

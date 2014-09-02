@@ -1,20 +1,26 @@
-<h1>These are your plants</h1>
+<div class="index">
 
-<table>
-  <tr>
-    <td>Plant name</td>
-    <td>Total yield</td>
-    <td>Still growing?</td>
-  </tr>
-  <% @plants.each do |p| %>
-  <tr>
-    <td><a href= "/plants/<%=p.id%>"><%= p.name %></td>
-    <td><%= p.total %><br>
-    <td><%= p.fruitbearing? %></td>
-    <td><a href = "/plants/<%=p.id%>/recipes/1">Find recipes</a></td>
-    <td><a href = "/plants/<%=p.id%>/edit">Edit</a></td>
-  </tr>
-  <% end %>
-</table>
+  <div class="index_table">
+    <table>
+      <tr>
+        <td>Plant name</td>
+        <td>Total yield</td>
+        <td>Still growing?</td>
+      </tr>
+      <% @plants.each do |p| %>
+      <tr>
+        <td><a href= "/plants/<%=p.id%>"><%= p.name %></td>
+        <td><%= p.total %><br>
+        <td><%= p.fruitbearing? %></td>
+        <td><a href = "/plants/<%=p.id%>/recipes/1">Find recipes</a></td>
+        <td><a href = "/plants/<%=p.id%>/edit">Edit</a></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  
+  <div class="add_new_button">
+    <p><a href = "/plants/new">ADD A PLANT</a></p>
+  </div>
 
-<a href = "/plants/new">Add a new plant to the garden</a>
+</div>
