@@ -6,4 +6,19 @@ $(document).ready(function(){
     function() { $(this).removeClass('hover_topnav') }
   );
   
+  $("#create_plant").on("submit", function(e) {
+
+    var validForm = true;
+    
+    var plantName = $("#plant_name").val();
+    if (plantName === ""){
+      $("#plant_name").next().show();
+      valid_form = false;
+    }
+    if (valid_form === false){
+      alert("INVALID FORM! Please input a plant name.");
+      e.preventDefault();
+    }
+  });
+  
 })
